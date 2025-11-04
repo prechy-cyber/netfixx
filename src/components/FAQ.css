@@ -1,0 +1,124 @@
+/* Container section */
+.faq-section {
+  background-color: #000;
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+  border-top: 8px solid #222;
+  border-bottom: 8px solid #222;
+}
+
+/* Title */
+.faq-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* FAQ list */
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* FAQ item */
+.faq-item {
+  margin-bottom: 0.5rem;
+}
+
+/* FAQ question */
+.faq-question {
+  width: 100%;
+  background-color: #303030;
+  color: #fff;
+  border: none;
+  outline: none;
+  text-align: left;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-question:hover {
+  background-color: #444;
+}
+
+/* FAQ answer */
+.faq-answer {
+  background-color: #303030;
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  text-align: left;
+  border-top: 1px solid #000;
+}
+
+/* Email section */
+.faq-email {
+  margin-top: 3rem;
+}
+
+.faq-email p {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.email-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.email-form input {
+  width: 400px;
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+}
+
+.email-form button {
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  padding: 0.9rem 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.email-form button:hover {
+  background-color: #f40612;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .faq-section {
+    padding: 2rem 1rem;
+  }
+
+  .faq-question {
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+
+  .faq-answer {
+    font-size: 1rem;
+  }
+
+  .email-form input {
+    width: 100%;
+  }
+
+  .faq-section h2 {
+    font-size: 1.8rem;
+  }
+}

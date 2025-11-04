@@ -1,0 +1,98 @@
+/* EnjoyTv.css - 4 equal cards, image at bottom of each card */
+
+.enjoy-container {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 20px;
+  border-top: 8px solid #222;
+  text-align: center;
+}
+
+/* Section title */
+.enjoy-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+/* Grid: exactly 4 columns on desktop, equal card sizes */
+.enjoy-card-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 20px;
+  align-items: stretch; /* make cards same height */
+}
+
+/* Card: column layout so we can push the image to the bottom */
+.enjoy-card {
+  background-color: #121212;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* text top, image bottom */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+  min-height: 280px; /* keeps consistent height; tweak if you want taller */
+  overflow: hidden;
+}
+
+/* Text block at top */
+.enjoy-text {
+  text-align: left;
+  margin-bottom: 12px;
+}
+
+.enjoy-text h3 {
+  font-size: 1.05rem;
+  margin: 0 0 8px 0;
+  font-weight: 700;
+}
+
+.enjoy-text p {
+  margin: 0;
+  color: #cfcfcf;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Image sits at bottom of the card */
+.enjoy-img {
+  width: 100%;
+  height: 110px;            /* fixed image area height so cards stay equal */
+  object-fit: contain;      /* keep image aspect ratio */
+  align-self: center;
+  margin-top: 14px;
+  border-radius: 6px;
+  background: transparent;
+}
+
+/* Responsive: 2 columns on tablet, 1 column on small screens */
+@media (max-width: 1024px) {
+  .enjoy-card-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .enjoy-img {
+    height: 120px;
+  }
+}
+
+@media (max-width: 600px) {
+  .enjoy-card-section {
+    grid-template-columns: 1fr;
+  }
+  .enjoy-container {
+    padding: 40px 12px;
+  }
+  .enjoy-title {
+    font-size: 1.6rem;
+  }
+  .enjoy-card {
+    min-height: auto;
+    padding: 18px;
+  }
+  .enjoy-img {
+    height: 160px;
+  }
+}

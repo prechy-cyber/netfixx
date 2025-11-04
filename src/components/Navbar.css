@@ -1,0 +1,46 @@
+/* Navbar.css - expect this to be imported by Navbar.js */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  z-index: 50; /* high so it sits above overlays */
+  transition: background 0.25s ease-in-out;
+  background: transparent;
+}
+
+.navbar--scrolled {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.navbar__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__logo {
+  width: 120px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.navbar__signin {
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.navbar__signin:hover {
+  background-color: #f40612;
+}
