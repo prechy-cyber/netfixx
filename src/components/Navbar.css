@@ -1,14 +1,13 @@
-/* Navbar.css - expect this to be imported by Navbar.js */
-
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   padding: 20px 40px;
-  z-index: 50; /* high so it sits above overlays */
+  z-index: 50;
   transition: background 0.25s ease-in-out;
   background: transparent;
+  box-sizing: border-box; /* ensures padding doesn’t push content off-screen */
 }
 
 .navbar--scrolled {
@@ -43,4 +42,36 @@
 
 .navbar__signin:hover {
   background-color: #f40612;
+}
+
+/* ✅ Mobile responsiveness fix */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .navbar__logo {
+    width: 90px;
+  }
+
+  .navbar__signin {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  /* ensures both items stay visible */
+  .navbar__container {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar__logo {
+    width: 80px;
+  }
+
+  .navbar__signin {
+    padding: 5px 10px;
+    font-size: 13px;
+  }
 }
